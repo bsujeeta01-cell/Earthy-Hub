@@ -1,0 +1,100 @@
+:root {
+    --color-green: #1a3a2a;
+    --color-orange: #c97052;
+    --color-background: #f5f3f0;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: var(--color-green);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    background-color: var(--color-orange);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.timeline {
+    padding: 20px;
+}
+
+.timeline-item {
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 4px solid var(--color-green);
+    background-color: white;
+}
+
+.impact {
+    background-color: var(--color-green);
+    color: white;
+    padding: 50px 20px;
+}
+
+footer {
+    background-color: var(--color-green);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+    .hero {
+        padding: 30px 10px;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    form {
+        padding: 15px;
+    }
+}
